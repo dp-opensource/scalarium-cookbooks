@@ -1,6 +1,5 @@
 # ruby 1.8.7 is ruby-enterprise, os we don't handle it here
-case node['scalarium']['ruby_version']
-when '1.9.2'
+if node['scalarium'] and node['scalarium']['ruby_version'] == '1.9.2'
   default[:ruby][:major_version] = '1.9'
   default[:ruby][:full_version] = '1.9.2'
   default[:ruby][:patch] = 'p180'
